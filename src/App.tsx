@@ -240,14 +240,14 @@ export default function App() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.1 }}>
 
           {/* ══════ HERO ══════ */}
-          <section className="relative flex items-center justify-center overflow-hidden px-5 sm:px-8" style={{ height: '100svh' }}>
+          <section className="relative grid place-content-center overflow-hidden px-5 sm:px-8 min-h-screen">
             {/* BG gradient */}
             <div className="absolute inset-0 bg-obsidian" />
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 120%, rgba(212,255,79,0.08) 0%, transparent 60%)' }} />
             {/* Grid pattern */}
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-            <div className="relative z-10 text-center mx-auto w-full" style={{ maxWidth: 900, marginTop: '-5vh' }}>
+            <div className="relative z-10 text-center mx-auto w-full py-20" style={{ maxWidth: 900 }}>
               <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-6">
                 Talleres Presenciales · 2026
               </div>
