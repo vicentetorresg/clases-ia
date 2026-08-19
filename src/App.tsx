@@ -255,8 +255,8 @@ export default function App() {
                 <span className="font-serif italic text-lime block">Up or Out.</span>
               </h1>
               <p className="mt-6 text-lg sm:text-xl text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 620 }}>
-                En las consultoras, o subes o te vas. Con la IA es igual:<br className="hidden sm:block" />
-                o aprendes a usarla, o te reemplaza quien sí lo hizo.
+                En tu trabajo, o subes o te reemplazan.<br className="hidden sm:block" />
+                Con la IA es lo mismo: o aprendes a usarla, o lo hace otro por ti.
               </p>
               <p className="mt-3 text-sm sm:text-base text-text-muted mx-auto" style={{ maxWidth: 520 }}>
                 4 sesiones presenciales. Grupos de 5. De cero a productivo en 1 mes.
