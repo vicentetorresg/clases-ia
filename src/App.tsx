@@ -173,7 +173,7 @@ function Section({ children, className = '', id }: { children: React.ReactNode; 
   }, [])
 
   return (
-    <section ref={ref} id={id} className={`px-6 ${className}`} style={{ paddingTop: 'clamp(80px,10vw,160px)', paddingBottom: 'clamp(80px,10vw,160px)' }}>
+    <section ref={ref} id={id} className={`px-6 md:px-16 lg:px-24 ${className}`} style={{ paddingTop: 'clamp(80px,10vw,160px)', paddingBottom: 'clamp(80px,10vw,160px)' }}>
       <div className="mx-auto" style={{ maxWidth: 1280 }}>
         {children}
       </div>
