@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger)
 const WORKSHOPS = [
   {
     id: 1,
-    title: 'Taller IA para Profesionales — Grupo 1',
+    title: 'Up or Out — Grupo 1',
     start: 'Martes 9 de Septiembre, 2026',
     dates: '9, 16, 23, 30 Sept',
     time: '19:00 — 20:30 hrs',
@@ -20,7 +20,7 @@ const WORKSHOPS = [
   },
   {
     id: 2,
-    title: 'Taller IA para Profesionales — Grupo 2',
+    title: 'Up or Out — Grupo 2',
     start: 'Martes 7 de Octubre, 2026',
     dates: '7, 14, 21, 28 Oct',
     time: '19:00 — 20:30 hrs',
@@ -29,7 +29,7 @@ const WORKSHOPS = [
   },
   {
     id: 3,
-    title: 'Taller IA para Profesionales — Grupo 3',
+    title: 'Up or Out — Grupo 3',
     start: 'Martes 4 de Noviembre, 2026',
     dates: '4, 11, 18, 25 Nov',
     time: '19:00 — 20:30 hrs',
@@ -137,13 +137,13 @@ function Loader({ onDone }: { onDone: () => void }) {
         className="text-center"
       >
         <div
-          className="text-5xl font-bold text-lime"
+          className="text-4xl sm:text-5xl font-bold text-lime"
           style={{ fontFamily: "'Instrument Serif', serif", fontStyle: 'italic', animation: 'shimmer 2s ease-in-out infinite' }}
         >
-          IA
+          Up or Out
         </div>
         <div className="mt-2 text-xs font-mono text-text-muted tracking-[0.4em] uppercase">
-          Talleres
+          Talleres IA
         </div>
       </motion.div>
     </motion.div>
@@ -249,15 +249,17 @@ export default function App() {
 
             <div className="relative z-10 text-center mx-auto w-full py-20" style={{ maxWidth: 900 }}>
               <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-6">
-                Talleres Presenciales · 2026
+                Talleres Presenciales de IA · 2026
               </div>
-              <h1 style={{ fontSize: 'clamp(32px, 6vw, 72px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
-                <span className="font-bold text-text-primary block">Sube tu nivel con</span>
-                <span className="font-serif italic text-lime block mt-2">Inteligencia Artificial</span>
+              <h1 style={{ fontSize: 'clamp(36px, 7vw, 80px)', lineHeight: 1.05, letterSpacing: '-0.03em' }}>
+                <span className="font-serif italic text-lime block">Up or Out.</span>
               </h1>
-              <p className="mt-6 text-base sm:text-lg text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 600 }}>
-                4 sesiones presenciales. Grupos de 5 personas.<br />
-                De cero a productivo con las herramientas que están cambiando el juego.
+              <p className="mt-6 text-lg sm:text-xl text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 620 }}>
+                En las consultoras, o subes o te vas. Con la IA es igual:<br className="hidden sm:block" />
+                o aprendes a usarla, o te reemplaza quien sí lo hizo.
+              </p>
+              <p className="mt-3 text-sm sm:text-base text-text-muted mx-auto" style={{ maxWidth: 520 }}>
+                4 sesiones presenciales. Grupos de 5. De cero a productivo en 1 mes.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <motion.a
@@ -266,8 +268,8 @@ export default function App() {
                   whileTap={{ scale: 0.98 }}
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:px-8 sm:py-4 rounded-2xl bg-lime text-obsidian font-bold text-sm sm:text-base transition-colors hover:bg-lime-dark"
                 >
-                  Ver próximos talleres
-                  <span aria-hidden="true">&rarr;</span>
+                  Quiero subir
+                  <span aria-hidden="true">&uarr;</span>
                 </motion.a>
                 <motion.a
                   href="#temario"
@@ -289,13 +291,13 @@ export default function App() {
 
           {/* ══════ WHAT YOU'LL LEARN ══════ */}
           <Section id="que-aprenderas">
-            <Eyebrow>Qué vas a aprender</Eyebrow>
+            <Eyebrow>Lo que vas a dominar</Eyebrow>
             <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-3 sm:mb-4">
-              Herramientas reales,{' '}
-              <span className="font-serif italic text-lime">resultados inmediatos</span>
+              Las herramientas que{' '}
+              <span className="font-serif italic text-lime">te hacen irremplazable</span>
             </h2>
             <p className="text-text-secondary text-base sm:text-lg mb-10 sm:mb-16 max-w-xl">
-              No es teoría. Cada sesión terminas con algo funcionando. Desde tu primer deploy hasta tu dashboard en producción.
+              No es teoría. Cada sesión terminas con algo funcionando. Tu competencia no sabe esto — esa es tu ventaja.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {[
@@ -324,7 +326,7 @@ export default function App() {
             <Eyebrow>Temario Clase a Clase</Eyebrow>
             <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-10 sm:mb-16">
               4 semanas para{' '}
-              <span className="font-serif italic text-lime">transformar tu trabajo</span>
+              <span className="font-serif italic text-lime">dejar atrás al resto</span>
             </h2>
             <div className="space-y-4 sm:space-y-8">
               {SYLLABUS.map((s, i) => (
@@ -355,10 +357,10 @@ export default function App() {
 
           {/* ══════ WORKSHOPS / PRICING ══════ */}
           <Section id="talleres">
-            <Eyebrow>Próximos Talleres</Eyebrow>
+            <Eyebrow>Próximos Grupos</Eyebrow>
             <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-3 sm:mb-4">
-              Elige tu grupo e{' '}
-              <span className="font-serif italic text-lime">inscríbete</span>
+              Elige tu grupo.{' '}
+              <span className="font-serif italic text-lime">Decide subir.</span>
             </h2>
             <p className="text-text-secondary text-base sm:text-lg mb-10 sm:mb-16 max-w-xl">
               $500.000 + IVA por persona. 4 sesiones de 1.5 horas. Todos los martes a las 19:00 hrs.
@@ -420,7 +422,7 @@ export default function App() {
                         </div>
                       </div>
                       <motion.a
-                        href={`https://wa.me/56994366697?text=Hola!%20Quiero%20inscribirme%20en%20el%20Taller%20IA%20Grupo%20${w.id}`}
+                        href={`https://wa.me/56994366697?text=Hola!%20Quiero%20inscribirme%20en%20Up%20or%20Out%20Grupo%20${w.id}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.03 }}
@@ -467,8 +469,8 @@ export default function App() {
           <Section>
             <Eyebrow>Para Quién Es</Eyebrow>
             <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-10 sm:mb-16">
-              Profesionales que quieren{' '}
-              <span className="font-serif italic text-lime">ir más rápido</span>
+              Para los que eligen{' '}
+              <span className="font-serif italic text-lime">subir</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
@@ -506,14 +508,13 @@ export default function App() {
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(212,255,79,0.1) 0%, transparent 50%)' }} />
             <div className="relative z-10">
               <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6">
-                No esperes más
+                La decisión es tuya
               </div>
               <h2 style={{ fontSize: 'clamp(28px,5vw,56px)', lineHeight: 1.1, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-4">
-                ¿Listo para{' '}
-                <span className="font-serif italic text-lime">subir tu nivel?</span>
+                <span className="font-serif italic text-lime">Up</span> or out.
               </h2>
               <p className="text-text-secondary text-base sm:text-lg mb-8 sm:mb-10 mx-auto" style={{ maxWidth: 480 }}>
-                Los cupos son limitados. Reserva tu lugar en el próximo taller.
+                La IA no va a esperar por ti. Los cupos son limitados. Decide ahora.
               </p>
               <motion.a
                 href="#talleres"
@@ -521,8 +522,8 @@ export default function App() {
                 whileTap={{ scale: 0.98 }}
                 className="inline-flex items-center gap-2 px-8 py-4 sm:px-10 sm:py-5 rounded-2xl bg-lime text-obsidian font-bold text-base sm:text-lg transition-colors hover:bg-lime-dark"
               >
-                Ver próximos talleres
-                <span aria-hidden="true">&rarr;</span>
+                Quiero subir
+                <span aria-hidden="true">&uarr;</span>
               </motion.a>
             </div>
             {/* Marquee */}
@@ -533,7 +534,7 @@ export default function App() {
               >
                 {Array.from({ length: 2 }).map((_, i) => (
                   <span key={i}>
-                    &nbsp;&nbsp;PRESENCIAL &middot; GRUPOS DE 5 &middot; CLAUDE CODE &middot; ADS &middot; DASHBOARDS &middot; PRODUCTIVIDAD &middot; INTEGRACIONES &middot; DEPLOY &middot;&nbsp;&nbsp;
+                    &nbsp;&nbsp;UP OR OUT &middot; PRESENCIAL &middot; GRUPOS DE 5 &middot; CLAUDE CODE &middot; ADS &middot; DASHBOARDS &middot; INTEGRACIONES &middot; DEPLOY &middot;&nbsp;&nbsp;
                   </span>
                 ))}
               </div>
@@ -544,8 +545,8 @@ export default function App() {
           <footer className="border-t border-border px-5 sm:px-8 py-8 sm:py-12">
             <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-6" style={{ maxWidth: 1120 }}>
               <div className="flex items-center gap-3">
-                <span className="font-serif italic text-2xl text-lime">IA</span>
-                <span className="text-sm text-text-muted">Talleres Presenciales</span>
+                <span className="font-serif italic text-2xl text-lime">Up or Out</span>
+                <span className="text-sm text-text-muted">Talleres IA Presenciales</span>
               </div>
               <div className="flex gap-6 sm:gap-8 text-sm text-text-secondary">
                 <a href="#temario" className="hover:text-lime transition-colors">Temario</a>
