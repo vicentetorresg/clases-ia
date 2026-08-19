@@ -255,8 +255,8 @@ export default function App() {
                 <span className="font-bold text-text-primary block">Sube tu nivel con</span>
                 <span className="font-serif italic text-lime block mt-2">Inteligencia Artificial</span>
               </h1>
-              <p className="mt-6 text-base sm:text-lg text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 520 }}>
-                4 sesiones presenciales. Grupos de 5 personas.
+              <p className="mt-6 text-base sm:text-lg text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 600 }}>
+                4 sesiones presenciales. Grupos de 5 personas.<br />
                 De cero a productivo con las herramientas que están cambiando el juego.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
