@@ -51,19 +51,19 @@ const SYLLABUS = [
   },
   {
     week: '02',
-    title: 'Ads, Pixeles & Generacion de Demanda',
+    title: 'Ads, Píxeles & Generación de Demanda',
     topics: [
-      'Meta Ads + TikTok Ads: estructura de campanas con IA',
-      'Instalacion de pixeles y tracking avanzado',
+      'Meta Ads + TikTok Ads: estructura de campañas con IA',
+      'Instalación de píxeles y tracking avanzado',
       'Generar landing pages que conviertan',
-      'Automatizar reportes de campanas',
+      'Automatizar reportes de campañas',
     ],
   },
   {
     week: '03',
     title: 'Conectar Todo: Integraciones & Automatizaciones',
     topics: [
-      'Supabase: base de datos en la nube sin codigo',
+      'Supabase: base de datos en la nube sin código',
       'Webhooks, crons y edge functions',
       'Conectar formularios, CRMs y notificaciones',
       'Email automatizado con Resend',
@@ -71,10 +71,10 @@ const SYLLABUS = [
   },
   {
     week: '04',
-    title: 'Dashboards & Presentacion de Resultados',
+    title: 'Dashboards & Presentación de Resultados',
     topics: [
       'Crear dashboards interactivos con IA',
-      'Visualizacion de datos para toma de decisiones',
+      'Visualización de datos para toma de decisiones',
       'Deploy profesional: dominio, SSL, Vercel',
       'Proyecto final: tu producto digital funcionando',
     ],
@@ -83,36 +83,36 @@ const SYLLABUS = [
 
 const FAQS = [
   {
-    q: 'Necesito saber programar?',
-    a: 'No. El taller esta disenado para profesionales sin experiencia tecnica. La IA hace el trabajo pesado, tu das las instrucciones.',
+    q: '¿Necesito saber programar?',
+    a: 'No. El taller está diseñado para profesionales sin experiencia técnica. La IA hace el trabajo pesado, tú das las instrucciones.',
   },
   {
-    q: 'Cuantas personas hay por grupo?',
-    a: 'Maximo 5 personas por grupo. Esto permite atencion personalizada y que todos avancen a buen ritmo.',
+    q: '¿Cuántas personas hay por grupo?',
+    a: 'Máximo 5 personas por grupo. Esto permite atención personalizada y que todos avancen a buen ritmo.',
   },
   {
-    q: 'Puede inscribirse mi equipo completo?',
-    a: 'Si. Puedes reservar un grupo completo para tu empresa. Adaptamos los ejercicios a tu industria.',
+    q: '¿Puede inscribirse mi equipo completo?',
+    a: 'Sí. Puedes reservar un grupo completo para tu empresa. Adaptamos los ejercicios a tu industria.',
   },
   {
-    q: 'Donde son las clases?',
-    a: 'Presenciales en Santiago. La ubicacion exacta se confirma al inscribirse.',
+    q: '¿Dónde son las clases?',
+    a: 'Presenciales en Santiago. La ubicación exacta se confirma al inscribirse.',
   },
   {
-    q: 'Que incluye el precio?',
+    q: '¿Qué incluye el precio?',
     a: '4 sesiones de 1.5 horas, material digital, acceso a grupo de WhatsApp exclusivo y soporte entre sesiones.',
   },
   {
-    q: 'Puedo pagar en cuotas?',
-    a: 'Si, aceptamos hasta 3 cuotas sin interes con tarjeta de credito.',
+    q: '¿Puedo pagar en cuotas?',
+    a: 'Sí, aceptamos hasta 3 cuotas sin interés con tarjeta de crédito.',
   },
   {
-    q: 'Que pasa si falto a una sesion?',
-    a: 'Grabamos un resumen de cada sesion y te enviamos el material. Tambien puedes recuperarla en el siguiente grupo.',
+    q: '¿Qué pasa si falto a una sesión?',
+    a: 'Grabamos un resumen de cada sesión y te enviamos el material. También puedes recuperarla en el siguiente grupo.',
   },
   {
-    q: 'Hay certificado?',
-    a: 'Si, al completar las 4 sesiones recibes un certificado digital de finalizacion.',
+    q: '¿Hay certificado?',
+    a: 'Sí, al completar las 4 sesiones recibes un certificado digital de finalización.',
   },
 ]
 
@@ -257,7 +257,7 @@ export default function App() {
               </h1>
               <p className="mt-5 sm:mt-6 text-base sm:text-lg text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 520 }}>
                 4 sesiones presenciales. Grupos de 5 personas.
-                De cero a productivo con las herramientas que estan cambiando el juego.
+                De cero a productivo con las herramientas que están cambiando el juego.
               </p>
               <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <motion.a
@@ -266,7 +266,7 @@ export default function App() {
                   whileTap={{ scale: 0.98 }}
                   className="inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:px-8 sm:py-4 rounded-2xl bg-lime text-obsidian font-bold text-sm sm:text-base transition-colors hover:bg-lime-dark"
                 >
-                  Ver proximos talleres
+                  Ver próximos talleres
                   <span aria-hidden="true">&rarr;</span>
                 </motion.a>
                 <motion.a
@@ -289,18 +289,18 @@ export default function App() {
 
           {/* ══════ WHAT YOU'LL LEARN ══════ */}
           <Section id="que-aprenderas">
-            <Eyebrow>Que vas a aprender</Eyebrow>
+            <Eyebrow>Qué vas a aprender</Eyebrow>
             <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-3 sm:mb-4">
               Herramientas reales,{' '}
               <span className="font-serif italic text-lime">resultados inmediatos</span>
             </h2>
             <p className="text-text-secondary text-base sm:text-lg mb-10 sm:mb-16 max-w-xl">
-              No es teoria. Cada sesion terminas con algo funcionando. Desde tu primer deploy hasta tu dashboard en produccion.
+              No es teoría. Cada sesión terminas con algo funcionando. Desde tu primer deploy hasta tu dashboard en producción.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {[
                 { icon: '>', title: 'Claude Code', desc: 'Programa sin saber programar. Crea apps, scripts y automatizaciones con lenguaje natural.' },
-                { icon: '$', title: 'Ads & Pixeles', desc: 'Meta Ads, TikTok Ads, pixeles de tracking. Campanas que generan demanda real.' },
+                { icon: '$', title: 'Ads & Píxeles', desc: 'Meta Ads, TikTok Ads, píxeles de tracking. Campañas que generan demanda real.' },
                 { icon: '{}', title: 'Integraciones', desc: 'Conecta todo: formularios, bases de datos, emails, webhooks. Sin depender de nadie.' },
                 { icon: '#', title: 'Dashboards', desc: 'Visualiza tus datos. Crea dashboards interactivos para tomar mejores decisiones.' },
               ].map((item, i) => (
@@ -355,10 +355,10 @@ export default function App() {
 
           {/* ══════ WORKSHOPS / PRICING ══════ */}
           <Section id="talleres">
-            <Eyebrow>Proximos Talleres</Eyebrow>
+            <Eyebrow>Próximos Talleres</Eyebrow>
             <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-3 sm:mb-4">
               Elige tu grupo e{' '}
-              <span className="font-serif italic text-lime">inscribete</span>
+              <span className="font-serif italic text-lime">inscríbete</span>
             </h2>
             <p className="text-text-secondary text-base sm:text-lg mb-10 sm:mb-16 max-w-xl">
               $500.000 + IVA por persona. 4 sesiones de 1.5 horas. Todos los martes a las 19:00 hrs.
@@ -443,16 +443,16 @@ export default function App() {
 
           {/* ══════ HOW IT WORKS ══════ */}
           <Section id="como-funciona" className="bg-surface">
-            <Eyebrow>Como Funciona</Eyebrow>
+            <Eyebrow>Cómo Funciona</Eyebrow>
             <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-10 sm:mb-16">
               Simple, directo,{' '}
               <span className="font-serif italic text-lime">sin relleno</span>
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {[
-                { n: '01', title: 'Elige tu grupo', desc: 'Revisa las fechas disponibles y reserva tu cupo. Maximo 5 personas por grupo para asegurar atencion personalizada.' },
-                { n: '02', title: 'Asiste cada martes', desc: '4 martes seguidos, 19:00 a 20:30. Cada sesion es practica: llegas, aprendes, construyes algo real.' },
-                { n: '03', title: 'Aplica desde el dia 1', desc: 'Terminas cada clase con herramientas funcionando. Al final del mes, tu flujo de trabajo es otro.' },
+                { n: '01', title: 'Elige tu grupo', desc: 'Revisa las fechas disponibles y reserva tu cupo. Máximo 5 personas por grupo para asegurar atención personalizada.' },
+                { n: '02', title: 'Asiste cada martes', desc: '4 martes seguidos, 19:00 a 20:30. Cada sesión es práctica: llegas, aprendes, construyes algo real.' },
+                { n: '03', title: 'Aplica desde el día 1', desc: 'Terminas cada clase con herramientas funcionando. Al final del mes, tu flujo de trabajo es otro.' },
               ].map((step, i) => (
                 <div key={i} className="text-left">
                   <div className="font-mono text-4xl sm:text-5xl font-bold text-lime/20 mb-3 sm:mb-4">{step.n}</div>
@@ -465,16 +465,16 @@ export default function App() {
 
           {/* ══════ FOR WHO ══════ */}
           <Section>
-            <Eyebrow>Para Quien Es</Eyebrow>
+            <Eyebrow>Para Quién Es</Eyebrow>
             <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-10 sm:mb-16">
               Profesionales que quieren{' '}
-              <span className="font-serif italic text-lime">ir mas rapido</span>
+              <span className="font-serif italic text-lime">ir más rápido</span>
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
-                { role: 'Emprendedores', desc: 'Que necesitan lanzar productos digitales sin equipo tecnico. Landing pages, CRMs, automatizaciones.' },
-                { role: 'Equipos de Marketing', desc: 'Que quieren dominar ads, tracking, pixeles y dashboards de resultados con IA.' },
-                { role: 'Profesionales', desc: 'De cualquier area que quieran multiplicar su productividad y destacar con herramientas de vanguardia.' },
+                { role: 'Emprendedores', desc: 'Que necesitan lanzar productos digitales sin equipo técnico. Landing pages, CRMs, automatizaciones.' },
+                { role: 'Equipos de Marketing', desc: 'Que quieren dominar ads, tracking, píxeles y dashboards de resultados con IA.' },
+                { role: 'Profesionales', desc: 'De cualquier área que quieran multiplicar su productividad y destacar con herramientas de vanguardia.' },
               ].map((item, i) => (
                 <div key={i} className="p-5 sm:p-6 rounded-2xl border border-border bg-surface">
                   <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center mb-3 sm:mb-4 font-mono text-lime text-sm font-bold">
@@ -491,8 +491,8 @@ export default function App() {
           <Section id="faq" className="bg-surface">
             <Eyebrow>Preguntas Frecuentes</Eyebrow>
             <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-8 sm:mb-12">
-              Dudas?{' '}
-              <span className="font-serif italic text-lime">Aqui las resolvemos</span>
+              ¿Dudas?{' '}
+              <span className="font-serif italic text-lime">Aquí las resolvemos</span>
             </h2>
             <div className="max-w-2xl">
               {FAQS.map((faq, i) => (
@@ -506,14 +506,14 @@ export default function App() {
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(212,255,79,0.1) 0%, transparent 50%)' }} />
             <div className="relative z-10">
               <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6">
-                No esperes mas
+                No esperes más
               </div>
               <h2 style={{ fontSize: 'clamp(28px,5vw,56px)', lineHeight: 1.1, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-4">
-                Listo para{' '}
+                ¿Listo para{' '}
                 <span className="font-serif italic text-lime">subir tu nivel?</span>
               </h2>
               <p className="text-text-secondary text-base sm:text-lg mb-8 sm:mb-10 mx-auto" style={{ maxWidth: 480 }}>
-                Los cupos son limitados. Reserva tu lugar en el proximo taller.
+                Los cupos son limitados. Reserva tu lugar en el próximo taller.
               </p>
               <motion.a
                 href="#talleres"
@@ -521,7 +521,7 @@ export default function App() {
                 whileTap={{ scale: 0.98 }}
                 className="inline-flex items-center gap-2 px-8 py-4 sm:px-10 sm:py-5 rounded-2xl bg-lime text-obsidian font-bold text-base sm:text-lg transition-colors hover:bg-lime-dark"
               >
-                Ver proximos talleres
+                Ver próximos talleres
                 <span aria-hidden="true">&rarr;</span>
               </motion.a>
             </div>
