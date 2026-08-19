@@ -173,8 +173,8 @@ function Section({ children, className = '', id }: { children: React.ReactNode; 
   }, [])
 
   return (
-    <section ref={ref} id={id} className={`px-6 md:px-16 lg:px-24 ${className}`} style={{ paddingTop: 'clamp(80px,10vw,160px)', paddingBottom: 'clamp(80px,10vw,160px)' }}>
-      <div className="mx-auto" style={{ maxWidth: 1280 }}>
+    <section ref={ref} id={id} className={`px-5 sm:px-8 md:px-16 lg:px-24 ${className}`} style={{ paddingTop: 'clamp(60px,10vw,160px)', paddingBottom: 'clamp(60px,10vw,160px)' }}>
+      <div className="mx-auto" style={{ maxWidth: 1120 }}>
         {children}
       </div>
     </section>
@@ -183,7 +183,7 @@ function Section({ children, className = '', id }: { children: React.ReactNode; 
 
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
-    <div className="font-mono text-xs text-lime uppercase tracking-[0.4em] mb-6">
+    <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6">
       {children}
     </div>
   )
@@ -198,10 +198,10 @@ function FAQItem({ q, a }: { q: string; a: string }) {
     >
       <button
         onClick={() => setOpen(!open)}
-        className="w-full flex items-center justify-between py-5 text-left cursor-pointer"
+        className="w-full flex items-center justify-between py-4 sm:py-5 text-left cursor-pointer"
         aria-expanded={open}
       >
-        <span className="text-lg font-medium text-text-primary pr-4">{q}</span>
+        <span className="text-base sm:text-lg font-medium text-text-primary pr-4">{q}</span>
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
           transition={{ duration: 0.3 }}
@@ -219,7 +219,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.3, ease: 'easeOut' }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-base text-text-secondary leading-relaxed">{a}</p>
+            <p className="pb-5 text-sm sm:text-base text-text-secondary leading-relaxed">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -240,31 +240,31 @@ export default function App() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.1 }}>
 
           {/* ══════ HERO ══════ */}
-          <section className="relative flex items-center justify-center overflow-hidden" style={{ height: '100svh' }}>
+          <section className="relative flex items-center justify-center overflow-hidden px-5 sm:px-8" style={{ minHeight: '100svh' }}>
             {/* BG gradient */}
             <div className="absolute inset-0 bg-obsidian" />
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 120%, rgba(212,255,79,0.08) 0%, transparent 60%)' }} />
             {/* Grid pattern */}
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-            <div className="relative z-10 text-center px-6" style={{ maxWidth: 900 }}>
-              <div className="font-mono text-xs text-lime uppercase tracking-[0.4em] mb-8">
+            <div className="relative z-10 text-center py-20" style={{ maxWidth: 900 }}>
+              <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-6 sm:mb-8">
                 Talleres Presenciales · 2026
               </div>
-              <h1 style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
+              <h1 style={{ fontSize: 'clamp(32px, 6vw, 72px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
                 <span className="font-bold text-text-primary block">Sube tu nivel con</span>
                 <span className="font-serif italic text-lime block">Inteligencia Artificial</span>
               </h1>
-              <p className="mt-6 text-lg text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 560 }}>
+              <p className="mt-5 sm:mt-6 text-base sm:text-lg text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 520 }}>
                 4 sesiones presenciales. Grupos de 5 personas.
                 De cero a productivo con las herramientas que estan cambiando el juego.
               </p>
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <motion.a
                   href="#talleres"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-lime text-obsidian font-bold text-base transition-colors hover:bg-lime-dark"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:px-8 sm:py-4 rounded-2xl bg-lime text-obsidian font-bold text-sm sm:text-base transition-colors hover:bg-lime-dark"
                 >
                   Ver proximos talleres
                   <span aria-hidden="true">&rarr;</span>
@@ -273,12 +273,12 @@ export default function App() {
                   href="#temario"
                   whileHover={{ scale: 1.03 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl border border-border text-text-primary font-medium text-base transition-colors hover:border-border-hover hover:bg-surface"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3.5 sm:px-8 sm:py-4 rounded-2xl border border-border text-text-primary font-medium text-sm sm:text-base transition-colors hover:border-border-hover hover:bg-surface"
                 >
                   Ver temario
                 </motion.a>
               </div>
-              <div className="mt-16 flex flex-wrap justify-center gap-8 text-text-muted text-sm font-mono">
+              <div className="mt-10 sm:mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 sm:gap-8 text-text-muted text-xs sm:text-sm font-mono">
                 <span>5 personas max.</span>
                 <span>4 semanas</span>
                 <span>Martes 19:00</span>
@@ -290,14 +290,14 @@ export default function App() {
           {/* ══════ WHAT YOU'LL LEARN ══════ */}
           <Section id="que-aprenderas">
             <Eyebrow>Que vas a aprender</Eyebrow>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-4">
+            <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-3 sm:mb-4">
               Herramientas reales,{' '}
               <span className="font-serif italic text-lime">resultados inmediatos</span>
             </h2>
-            <p className="text-text-secondary text-lg mb-16 max-w-xl">
+            <p className="text-text-secondary text-base sm:text-lg mb-10 sm:mb-16 max-w-xl">
               No es teoria. Cada sesion terminas con algo funcionando. Desde tu primer deploy hasta tu dashboard en produccion.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {[
                 { icon: '>', title: 'Claude Code', desc: 'Programa sin saber programar. Crea apps, scripts y automatizaciones con lenguaje natural.' },
                 { icon: '$', title: 'Ads & Pixeles', desc: 'Meta Ads, TikTok Ads, pixeles de tracking. Campanas que generan demanda real.' },
@@ -307,12 +307,12 @@ export default function App() {
                 <motion.div
                   key={i}
                   whileHover={{ y: -4 }}
-                  className="p-6 rounded-2xl border border-border bg-surface transition-colors hover:border-border-hover hover:bg-surface-hover"
+                  className="p-5 sm:p-6 rounded-2xl border border-border bg-surface transition-colors hover:border-border-hover hover:bg-surface-hover"
                 >
-                  <div className="w-12 h-12 rounded-xl bg-lime/10 flex items-center justify-center mb-4 font-mono text-lime text-lg font-bold">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-lime/10 flex items-center justify-center mb-3 sm:mb-4 font-mono text-lime text-base sm:text-lg font-bold">
                     {item.icon}
                   </div>
-                  <h3 className="text-lg font-bold text-text-primary mb-2">{item.title}</h3>
+                  <h3 className="text-base sm:text-lg font-bold text-text-primary mb-2">{item.title}</h3>
                   <p className="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
                 </motion.div>
               ))}
@@ -322,23 +322,23 @@ export default function App() {
           {/* ══════ SYLLABUS ══════ */}
           <Section id="temario" className="bg-surface">
             <Eyebrow>Temario Clase a Clase</Eyebrow>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-16">
+            <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-10 sm:mb-16">
               4 semanas para{' '}
               <span className="font-serif italic text-lime">transformar tu trabajo</span>
             </h2>
-            <div className="space-y-8">
+            <div className="space-y-4 sm:space-y-8">
               {SYLLABUS.map((s, i) => (
                 <motion.div
                   key={i}
                   whileHover={{ x: 4 }}
-                  className="flex flex-col md:flex-row gap-6 md:gap-12 p-6 md:p-8 rounded-2xl border border-border bg-obsidian/50 transition-colors hover:border-border-hover"
+                  className="flex flex-col sm:flex-row gap-4 sm:gap-12 p-5 sm:p-8 rounded-2xl border border-border bg-obsidian/50 transition-colors hover:border-border-hover"
                 >
-                  <div className="shrink-0">
-                    <div className="font-mono text-4xl font-bold text-lime/30">{s.week}</div>
-                    <div className="font-mono text-xs text-text-muted mt-1 uppercase">Semana</div>
+                  <div className="shrink-0 flex sm:block items-center gap-3">
+                    <div className="font-mono text-3xl sm:text-4xl font-bold text-lime/30">{s.week}</div>
+                    <div className="font-mono text-xs text-text-muted sm:mt-1 uppercase">Semana</div>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-text-primary mb-4">{s.title}</h3>
+                    <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-3 sm:mb-4">{s.title}</h3>
                     <ul className="space-y-2">
                       {s.topics.map((t, j) => (
                         <li key={j} className="flex items-start gap-3 text-text-secondary text-sm leading-relaxed">
@@ -356,14 +356,14 @@ export default function App() {
           {/* ══════ WORKSHOPS / PRICING ══════ */}
           <Section id="talleres">
             <Eyebrow>Proximos Talleres</Eyebrow>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-4">
+            <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-3 sm:mb-4">
               Elige tu grupo e{' '}
               <span className="font-serif italic text-lime">inscribete</span>
             </h2>
-            <p className="text-text-secondary text-lg mb-16 max-w-xl">
+            <p className="text-text-secondary text-base sm:text-lg mb-10 sm:mb-16 max-w-xl">
               $500.000 + IVA por persona. 4 sesiones de 1.5 horas. Todos los martes a las 19:00 hrs.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
               {WORKSHOPS.map((w, i) => {
                 const available = w.spots - w.taken
                 const isFeatured = i === 0
@@ -371,7 +371,7 @@ export default function App() {
                   <motion.div
                     key={w.id}
                     whileHover={{ y: -6 }}
-                    className={`relative p-8 rounded-2xl border transition-colors flex flex-col ${
+                    className={`relative p-6 sm:p-8 rounded-2xl border transition-colors flex flex-col ${
                       isFeatured
                         ? 'border-lime/40 bg-lime/[0.03]'
                         : 'border-border bg-surface hover:border-border-hover'
@@ -388,27 +388,27 @@ export default function App() {
                         </span>
                       )}
                     </div>
-                    <h3 className="text-lg font-bold text-text-primary mb-4">{w.title}</h3>
+                    <h3 className="text-base sm:text-lg font-bold text-text-primary mb-4">{w.title}</h3>
                     <div className="space-y-2 text-sm text-text-secondary mb-6">
                       <div className="flex items-center gap-2">
-                        <span className="text-lime">&#9654;</span> Inicio: {w.start}
+                        <span className="text-lime shrink-0">&#9654;</span> Inicio: {w.start}
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-lime">&#9654;</span> Sesiones: {w.dates}
+                        <span className="text-lime shrink-0">&#9654;</span> Sesiones: {w.dates}
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-lime">&#9654;</span> Horario: {w.time}
+                        <span className="text-lime shrink-0">&#9654;</span> Horario: {w.time}
                       </div>
                     </div>
                     <div className="mt-auto">
                       <div className="flex items-baseline gap-1 mb-1">
-                        <span className="text-3xl font-bold text-text-primary">$500.000</span>
+                        <span className="text-2xl sm:text-3xl font-bold text-text-primary">$500.000</span>
                         <span className="text-sm text-text-muted">+ IVA</span>
                       </div>
-                      <div className="text-xs text-text-muted mb-6">4 sesiones · 1 mes</div>
+                      <div className="text-xs text-text-muted mb-5 sm:mb-6">4 sesiones · 1 mes</div>
                       <div className="flex items-center justify-between mb-4">
                         <span className="text-xs font-mono text-text-secondary">
-                          {available} de {w.spots} cupos disponibles
+                          {available}/{w.spots} cupos
                         </span>
                         <div className="flex gap-1">
                           {Array.from({ length: w.spots }).map((_, j) => (
@@ -425,7 +425,7 @@ export default function App() {
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.03 }}
                         whileTap={{ scale: 0.98 }}
-                        className={`w-full inline-flex items-center justify-center py-3.5 rounded-xl font-bold text-sm transition-colors ${
+                        className={`w-full inline-flex items-center justify-center py-3 sm:py-3.5 rounded-xl font-bold text-sm transition-colors ${
                           isFeatured
                             ? 'bg-lime text-obsidian hover:bg-lime-dark'
                             : 'border border-border text-text-primary hover:border-border-hover hover:bg-surface-hover'
@@ -444,7 +444,7 @@ export default function App() {
           {/* ══════ HOW IT WORKS ══════ */}
           <Section id="como-funciona" className="bg-surface">
             <Eyebrow>Como Funciona</Eyebrow>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-16">
+            <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-10 sm:mb-16">
               Simple, directo,{' '}
               <span className="font-serif italic text-lime">sin relleno</span>
             </h2>
@@ -454,33 +454,33 @@ export default function App() {
                 { n: '02', title: 'Asiste cada martes', desc: '4 martes seguidos, 19:00 a 20:30. Cada sesion es practica: llegas, aprendes, construyes algo real.' },
                 { n: '03', title: 'Aplica desde el dia 1', desc: 'Terminas cada clase con herramientas funcionando. Al final del mes, tu flujo de trabajo es otro.' },
               ].map((step, i) => (
-                <div key={i} className="text-center md:text-left">
-                  <div className="font-mono text-5xl font-bold text-lime/20 mb-4">{step.n}</div>
-                  <h3 className="text-xl font-bold text-text-primary mb-3">{step.title}</h3>
-                  <p className="text-text-secondary leading-relaxed">{step.desc}</p>
+                <div key={i} className="text-left">
+                  <div className="font-mono text-4xl sm:text-5xl font-bold text-lime/20 mb-3 sm:mb-4">{step.n}</div>
+                  <h3 className="text-lg sm:text-xl font-bold text-text-primary mb-2 sm:mb-3">{step.title}</h3>
+                  <p className="text-sm sm:text-base text-text-secondary leading-relaxed">{step.desc}</p>
                 </div>
               ))}
             </div>
           </Section>
 
-          {/* ══════ SOCIAL PROOF ══════ */}
+          {/* ══════ FOR WHO ══════ */}
           <Section>
             <Eyebrow>Para Quien Es</Eyebrow>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-16">
+            <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-10 sm:mb-16">
               Profesionales que quieren{' '}
               <span className="font-serif italic text-lime">ir mas rapido</span>
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
               {[
                 { role: 'Emprendedores', desc: 'Que necesitan lanzar productos digitales sin equipo tecnico. Landing pages, CRMs, automatizaciones.' },
                 { role: 'Equipos de Marketing', desc: 'Que quieren dominar ads, tracking, pixeles y dashboards de resultados con IA.' },
                 { role: 'Profesionales', desc: 'De cualquier area que quieran multiplicar su productividad y destacar con herramientas de vanguardia.' },
               ].map((item, i) => (
-                <div key={i} className="p-6 rounded-2xl border border-border bg-surface">
-                  <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center mb-4 font-mono text-lime text-sm font-bold">
+                <div key={i} className="p-5 sm:p-6 rounded-2xl border border-border bg-surface">
+                  <div className="w-10 h-10 rounded-full bg-lime/10 flex items-center justify-center mb-3 sm:mb-4 font-mono text-lime text-sm font-bold">
                     {String(i + 1).padStart(2, '0')}
                   </div>
-                  <h3 className="text-lg font-bold text-text-primary mb-2">{item.role}</h3>
+                  <h3 className="text-base sm:text-lg font-bold text-text-primary mb-2">{item.role}</h3>
                   <p className="text-sm text-text-secondary leading-relaxed">{item.desc}</p>
                 </div>
               ))}
@@ -490,11 +490,11 @@ export default function App() {
           {/* ══════ FAQ ══════ */}
           <Section id="faq" className="bg-surface">
             <Eyebrow>Preguntas Frecuentes</Eyebrow>
-            <h2 style={{ fontSize: 'clamp(28px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-12">
+            <h2 style={{ fontSize: 'clamp(24px,4vw,48px)', lineHeight: 1.15, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-8 sm:mb-12">
               Dudas?{' '}
               <span className="font-serif italic text-lime">Aqui las resolvemos</span>
             </h2>
-            <div className="max-w-2xl mx-auto">
+            <div className="max-w-2xl">
               {FAQS.map((faq, i) => (
                 <FAQItem key={i} q={faq.q} a={faq.a} />
               ))}
@@ -502,33 +502,33 @@ export default function App() {
           </Section>
 
           {/* ══════ FINAL CTA ══════ */}
-          <section className="relative py-32 px-6 text-center overflow-hidden">
+          <section className="relative py-20 sm:py-32 px-5 sm:px-8 text-center overflow-hidden">
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(212,255,79,0.1) 0%, transparent 50%)' }} />
             <div className="relative z-10">
-              <div className="font-mono text-xs text-lime uppercase tracking-[0.4em] mb-6">
+              <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6">
                 No esperes mas
               </div>
-              <h2 style={{ fontSize: 'clamp(32px,5vw,56px)', lineHeight: 1.1, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-4">
+              <h2 style={{ fontSize: 'clamp(28px,5vw,56px)', lineHeight: 1.1, letterSpacing: '-0.02em' }} className="font-bold text-text-primary mb-4">
                 Listo para{' '}
                 <span className="font-serif italic text-lime">subir tu nivel?</span>
               </h2>
-              <p className="text-text-secondary text-lg mb-10 mx-auto" style={{ maxWidth: 480 }}>
+              <p className="text-text-secondary text-base sm:text-lg mb-8 sm:mb-10 mx-auto" style={{ maxWidth: 480 }}>
                 Los cupos son limitados. Reserva tu lugar en el proximo taller.
               </p>
               <motion.a
                 href="#talleres"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center gap-2 px-10 py-5 rounded-2xl bg-lime text-obsidian font-bold text-lg transition-colors hover:bg-lime-dark"
+                className="inline-flex items-center gap-2 px-8 py-4 sm:px-10 sm:py-5 rounded-2xl bg-lime text-obsidian font-bold text-base sm:text-lg transition-colors hover:bg-lime-dark"
               >
                 Ver proximos talleres
                 <span aria-hidden="true">&rarr;</span>
               </motion.a>
             </div>
             {/* Marquee */}
-            <div className="mt-20 overflow-hidden">
+            <div className="mt-16 sm:mt-20 overflow-hidden">
               <div
-                className="flex whitespace-nowrap font-mono text-sm text-text-muted uppercase tracking-[0.3em] hover:[animation-play-state:paused]"
+                className="flex whitespace-nowrap font-mono text-xs sm:text-sm text-text-muted uppercase tracking-[0.2em] sm:tracking-[0.3em] hover:[animation-play-state:paused]"
                 style={{ animation: 'marquee 20s linear infinite', width: 'max-content' }}
               >
                 {Array.from({ length: 2 }).map((_, i) => (
@@ -541,13 +541,13 @@ export default function App() {
           </section>
 
           {/* ══════ FOOTER ══════ */}
-          <footer className="border-t border-border px-6 py-12">
-            <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-6" style={{ maxWidth: 1280 }}>
+          <footer className="border-t border-border px-5 sm:px-8 py-8 sm:py-12">
+            <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-6" style={{ maxWidth: 1120 }}>
               <div className="flex items-center gap-3">
                 <span className="font-serif italic text-2xl text-lime">IA</span>
                 <span className="text-sm text-text-muted">Talleres Presenciales</span>
               </div>
-              <div className="flex gap-8 text-sm text-text-secondary">
+              <div className="flex gap-6 sm:gap-8 text-sm text-text-secondary">
                 <a href="#temario" className="hover:text-lime transition-colors">Temario</a>
                 <a href="#talleres" className="hover:text-lime transition-colors">Talleres</a>
                 <a href="#faq" className="hover:text-lime transition-colors">FAQ</a>
