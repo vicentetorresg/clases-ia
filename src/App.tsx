@@ -240,7 +240,7 @@ export default function App() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.1 }}>
 
           {/* ══════ HERO ══════ */}
-          <section className="relative flex items-center justify-center overflow-hidden" style={{ minHeight: '100svh' }}>
+          <section className="relative flex items-center justify-center overflow-hidden" style={{ height: '100svh' }}>
             {/* BG gradient */}
             <div className="absolute inset-0 bg-obsidian" />
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 120%, rgba(212,255,79,0.08) 0%, transparent 60%)' }} />
@@ -252,8 +252,8 @@ export default function App() {
                 Talleres Presenciales · 2026
               </div>
               <h1 style={{ fontSize: 'clamp(36px, 6vw, 72px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
-                <span className="font-bold text-text-primary">Sube tu nivel con </span>
-                <span className="font-serif italic text-lime">Inteligencia Artificial</span>
+                <span className="font-bold text-text-primary block">Sube tu nivel con</span>
+                <span className="font-serif italic text-lime block">Inteligencia Artificial</span>
               </h1>
               <p className="mt-6 text-lg text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 560 }}>
                 4 sesiones presenciales. Grupos de 5 personas.
@@ -378,13 +378,15 @@ export default function App() {
                     }`}
                     style={isFeatured ? { boxShadow: '0 0 80px rgba(212,255,79,0.06)' } : {}}
                   >
-                    {isFeatured && (
-                      <div className="absolute -top-3 left-6 px-3 py-1 rounded-full bg-lime text-obsidian text-xs font-bold uppercase tracking-wider">
-                        Proximo
-                      </div>
-                    )}
-                    <div className="font-mono text-xs text-text-muted uppercase tracking-wider mb-3">
-                      Grupo {w.id}
+                    <div className="flex items-center gap-3 mb-3">
+                      <span className="font-mono text-xs text-text-muted uppercase tracking-wider">
+                        Grupo {w.id}
+                      </span>
+                      {isFeatured && (
+                        <span className="px-2.5 py-0.5 rounded-full bg-lime text-obsidian text-[10px] font-bold uppercase tracking-wider">
+                          Proximo
+                        </span>
+                      )}
                     </div>
                     <h3 className="text-lg font-bold text-text-primary mb-4">{w.title}</h3>
                     <div className="space-y-2 text-sm text-text-secondary mb-6">
