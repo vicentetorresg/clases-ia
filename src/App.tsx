@@ -96,7 +96,7 @@ const FAQS = [
   },
   {
     q: '¿Dónde son las clases?',
-    a: 'Presenciales en Santiago. La ubicación exacta se confirma al inscribirse.',
+    a: 'Presenciales cerca del Metro Manquehue, Las Condes. La dirección exacta se confirma al inscribirse.',
   },
   {
     q: '¿Qué incluye el precio?',
@@ -282,7 +282,7 @@ export default function App() {
                 <span>5 personas max.</span>
                 <span>4 semanas</span>
                 <span>Martes 19:00</span>
-                <span>Presencial</span>
+                <span>Cerca del Metro Manquehue, Las Condes</span>
               </div>
             </div>
           </section>
