@@ -247,19 +247,19 @@ export default function App() {
             {/* Grid pattern */}
             <div className="absolute inset-0 opacity-[0.03]" style={{ backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)', backgroundSize: '60px 60px' }} />
 
-            <div className="relative z-10 text-center py-20" style={{ maxWidth: 900 }}>
-              <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-6 sm:mb-8">
+            <div className="relative z-10 text-center py-20 mx-auto w-full" style={{ maxWidth: 900 }}>
+              <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-8 sm:mb-10">
                 Talleres Presenciales · 2026
               </div>
               <h1 style={{ fontSize: 'clamp(32px, 6vw, 72px)', lineHeight: 1.1, letterSpacing: '-0.02em' }}>
                 <span className="font-bold text-text-primary block">Sube tu nivel con</span>
-                <span className="font-serif italic text-lime block">Inteligencia Artificial</span>
+                <span className="font-serif italic text-lime block mt-2">Inteligencia Artificial</span>
               </h1>
-              <p className="mt-5 sm:mt-6 text-base sm:text-lg text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 520 }}>
+              <p className="mt-8 sm:mt-10 text-base sm:text-lg text-text-secondary mx-auto leading-relaxed" style={{ maxWidth: 520 }}>
                 4 sesiones presenciales. Grupos de 5 personas.
                 De cero a productivo con las herramientas que están cambiando el juego.
               </p>
-              <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <div className="mt-10 sm:mt-12 flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
                 <motion.a
                   href="#talleres"
                   whileHover={{ scale: 1.03 }}
@@ -278,11 +278,11 @@ export default function App() {
                   Ver temario
                 </motion.a>
               </div>
-              <div className="mt-10 sm:mt-16 grid grid-cols-2 sm:flex sm:flex-wrap justify-center gap-4 sm:gap-8 text-text-muted text-xs sm:text-sm font-mono">
+              <div className="mt-12 sm:mt-16 flex flex-wrap justify-center gap-x-8 gap-y-3 text-text-muted text-xs sm:text-sm font-mono">
                 <span>5 personas max.</span>
                 <span>4 semanas</span>
                 <span>Martes 19:00</span>
-                <span>Cerca del Metro Manquehue, Las Condes</span>
+                <span>Metro Manquehue, Las Condes</span>
               </div>
             </div>
           </section>
