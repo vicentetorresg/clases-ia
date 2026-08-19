@@ -173,7 +173,7 @@ function Section({ children, className = '', id }: { children: React.ReactNode; 
   }, [])
 
   return (
-    <section ref={ref} id={id} className={`px-5 sm:px-8 md:px-16 lg:px-24 ${className}`} style={{ paddingTop: 'clamp(60px,10vw,160px)', paddingBottom: 'clamp(60px,10vw,160px)' }}>
+    <section ref={ref} id={id} className={`px-6 sm:px-12 md:px-20 lg:px-32 ${className}`} style={{ paddingTop: 'clamp(60px,10vw,160px)', paddingBottom: 'clamp(60px,10vw,160px)' }}>
       <div className="mx-auto" style={{ maxWidth: 1120 }}>
         {children}
       </div>
@@ -240,7 +240,7 @@ export default function App() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.8, delay: 0.1 }}>
 
           {/* ══════ HERO ══════ */}
-          <section className="relative grid place-content-center overflow-hidden px-5 sm:px-8 min-h-screen">
+          <section className="relative grid place-content-center overflow-hidden px-6 sm:px-12 md:px-20 lg:px-32 min-h-screen">
             {/* BG gradient */}
             <div className="absolute inset-0 bg-obsidian" />
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 120%, rgba(212,255,79,0.08) 0%, transparent 60%)' }} />
@@ -504,7 +504,7 @@ export default function App() {
           </Section>
 
           {/* ══════ FINAL CTA ══════ */}
-          <section className="relative py-20 sm:py-32 px-5 sm:px-8 text-center overflow-hidden">
+          <section className="relative py-20 sm:py-32 px-6 sm:px-12 md:px-20 lg:px-32 text-center overflow-hidden">
             <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(212,255,79,0.1) 0%, transparent 50%)' }} />
             <div className="relative z-10">
               <div className="font-mono text-[10px] sm:text-xs text-lime uppercase tracking-[0.3em] sm:tracking-[0.4em] mb-4 sm:mb-6">
@@ -542,7 +542,7 @@ export default function App() {
           </section>
 
           {/* ══════ FOOTER ══════ */}
-          <footer className="border-t border-border px-5 sm:px-8 py-8 sm:py-12">
+          <footer className="border-t border-border px-6 sm:px-12 md:px-20 lg:px-32 py-8 sm:py-12">
             <div className="mx-auto flex flex-col md:flex-row items-center justify-between gap-6" style={{ maxWidth: 1120 }}>
               <div className="flex items-center gap-3">
                 <span className="font-serif italic text-2xl text-lime">Up or Out</span>
