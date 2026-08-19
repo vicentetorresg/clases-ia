@@ -420,7 +420,7 @@ export default function App() {
                         </div>
                       </div>
                       <motion.a
-                        href={`https://wa.me/56957823672?text=Hola!%20Quiero%20inscribirme%20en%20el%20Taller%20IA%20Grupo%20${w.id}`}
+                        href={`https://wa.me/56994366697?text=Hola!%20Quiero%20inscribirme%20en%20el%20Taller%20IA%20Grupo%20${w.id}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         whileHover={{ scale: 1.03 }}
